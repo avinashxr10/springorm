@@ -30,10 +30,13 @@ public class StudentDao {
         return students;
     }
 
-    //updating data
+    //update
     @Transactional
-    public void updateStudent(Student student) {
-        this.hibernateTemplate.update(student);
+    public void updateStudent(int id, String name, String city) {
+        Student student = this.hibernateTemplate.get(Student.class, id);
+        student.setStudentName(name);
+        student.setStudentCity(city);
+        this.hibernateTemplate.save(student);
     }
 
     //delete data

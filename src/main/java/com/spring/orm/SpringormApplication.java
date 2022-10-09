@@ -6,6 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 @SpringBootApplication
 public class SpringormApplication {
 
@@ -19,7 +22,14 @@ public class SpringormApplication {
 //        int r = studentDAO.insert(student);
 //        System.out.println(r);
 
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
+        System.out.println("PRESS 1 for add new student");
+        System.out.println("PRESS 2 for display all students");
+        System.out.println("PRESS 3 for get details of single student");
+        System.out.println("PRESS 4 for delete student");
+        System.out.println("PRESS 5 for update student");
+        System.out.println("PRESS 6 for exit");
 
     }
 
